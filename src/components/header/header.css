@@ -1,0 +1,11 @@
+.header-bar {
+    display: flex;
+    text-align: center;
+    background-color: lightgrey;
+
+}
+
+.header-item {
+    padding: 2px;
+    margin: 2px;
+}
