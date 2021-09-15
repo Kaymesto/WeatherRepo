@@ -1,7 +1,7 @@
 import { Route, Switch, useHistory } from "react-router-dom"
 import { FormCityToday } from './components/Forms/FormCityToday';
 import { Home } from './components/Home';
-import { DisplayWeather } from './components/DisplayWeather';
+import { DisplayWeatherToday } from './components/DisplayWeatherToday';
 import { FormCityToCome } from './components/Forms/FormCityToCome';
 import { DisplayWeatherToCome } from './components/DisplayWeatherToCome';
 
@@ -21,7 +21,7 @@ export const Routing = () => {
             <Route exact path={URLHOME} component={Home} />
             <Route exact path={URL_FORM_WEATHER_TODAY} component={FormCityToday} />
             <Route path={URL_FORM_WEATHER_TO_COME} component={FormCityToCome} ></Route>
-            <Route path={URL_DISPLAY_WEATHER_TODAY} component={DisplayWeather} ></Route>
+            <Route path={URL_DISPLAY_WEATHER_TODAY} component={DisplayWeatherToday} ></Route>
             <Route path={URL_DISPLAY_WEATHER_TO_COME} component={DisplayWeatherToCome} ></Route>
         </Switch>
 

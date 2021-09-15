@@ -3,6 +3,7 @@ import { weatherData } from '../../models/weatherData';
 import { useHistory } from "react-router-dom";
 import { city } from '../../models/city';
 import { weatherService } from './../../services/weatherService';
+import { ComponentForm } from './ComponentForm';
 
 export const FormCityToday = () => {
 
@@ -26,12 +27,7 @@ export const FormCityToday = () => {
     }
 
     return (
-        <form onSubmit={submit}>
-            <label>
-                Nom de la ville :
-                <input type="text" name="town" value={town} onChange={(e) => setTown(e.target.value)} />
-            </label>
-            <input type="submit" value="Envoyer" />
-        </form>
+        <ComponentForm submit={submit} weather={weather} setTown={setTown} />
+
     )
 }

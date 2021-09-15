@@ -1,44 +1,42 @@
 export interface weatherData {
-    id: number,
-    name: String,
-    cod: number,
-    timezone: number,
-    dt: number,
-    visibility: number,
-    base: String,
-    coord: coord,
-    main: main,
-    wind: wind,
-    clouds: clouds,
-    sys: sys,
-    weather: weather
+    "coord": coord,
+    "weather": [
+        {
+            "id": number,
+            "main": String,
+            "description": String,
+            "icon": String
+        }
+    ],
+    "base": String,
+    "main": main,
+    "visibility": number,
+    "wind": wind,
+    "clouds": clouds,
+    "dt": number,
+    "sys": sys,
+    "timezone": number,
+    "id": number,
+    "name": String,
+    "cod": number
 }
 
 
 interface coord {
     lon: number,
     lat: number
-
 }
 
 interface weather {
-    0: [
-        {
-            "id": number,
-            "main": String,
-            "description": String,
-            "icon": String,
-        }
-    ]
 }
 
 interface main {
-    temp: number,
-    feels_like: number,
-    temp_min: number,
-    temp_max: number,
-    pressure: number,
-    humidity: number
+    "temp": number,
+    "feels_like": number,
+    "temp_min": number,
+    "temp_max": number,
+    "pressure": number,
+    "humidity": number
 }
 
 interface wind {
@@ -51,9 +49,9 @@ interface clouds {
 }
 
 interface sys {
-    type: number,
-    id: number,
-    country: String,
-    sunrise: number,
-    sunset: number
+    "type": number,
+    "id": number,
+    "country": String,
+    "sunrise": number,
+    "sunset": number
 }

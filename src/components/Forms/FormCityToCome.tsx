@@ -3,6 +3,7 @@ import { useHistory } from "react-router-dom";
 import { weatherData } from './../../models/weatherData';
 import { weatherService } from './../../services/weatherService';
 import { city } from './../../models/city';
+import { ComponentForm } from "./ComponentForm";
 
 export const FormCityToCome = () => {
 
@@ -19,18 +20,12 @@ export const FormCityToCome = () => {
         console.log(town);
         weatherService.findCityWeatherToCome(citytoCheck).then(res => {
             setWeather(res);
+            console.log("DANS SUBMIT", res);
             history.push('/displayWeatherToCome', { data: res })
         });
-
     }
 
     return (
-        <form onSubmit={submit}>
-            <label>
-                Nom de la ville :
-                <input type="text" name="town" value={town} onChange={(e) => setTown(e.target.value)} />
-            </label>
-            <input type="submit" value="Envoyer" />
-        </form>
+        <ComponentForm submit={submit} weather={weather} setTown={setTown} />
     )
 }
